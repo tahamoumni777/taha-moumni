@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import About from './components/about.js';
+import Skills from './components/skills.js';
+import Projects from './components/projects.js';
+import Contact from './components/contact.js';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Taha Moumni</h1>
+        <p>Web Developer & Designer</p>
       </header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <footer>
+        <p>© 2024 Taha Moumni</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
